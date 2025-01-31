@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="bg-gray-100">
+    <header class="shadow-md p-4 bg-gradient-to-b from-stone-300 to-stone-100">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+               <img src="assets/logo-header.png" alt="Full Logo" class="hidden sm:block">
+               <img src="assets/Group.png" alt="Full Logo" class="block lg:hidden">
+
+                
+            </div>
+            
+            <button class="btn btn-ghost md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <nav class="hidden md:flex">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-green-600">Product</a></li>
+                    <li><a href="#" class="hover:text-green-600">Services</a></li>
+                    <li><a href="#" class="hover:text-green-600">Contact us</a></li>
+                </ul>
+            </nav>
+            
+            <div class="hidden md:flex items-center space-x-4">
+                <button class="btn btn-ghost"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0a7 7 0 111.414-1.414L21 21z"></path></svg></button>
+                <button class="btn btn-ghost"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18l-2 10H5L3 3z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 14a2 2 0 100 4 2 2 0 000-4zM8 14a2 2 0 100 4 2 2 0 000-4z"></path></svg></button>
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-success">Register</button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4 shadow-lg">
+            <ul class="space-y-4">
+                <li><a href="#" class="block hover:text-green-600">Product</a></li>
+                <li><a href="#" class="block hover:text-green-600">Services</a></li>
+                <li><a href="#" class="block hover:text-green-600">Contact us</a></li>
+                <li><button class="btn btn-outline w-full">Login</button></li>
+                <li><button class="btn btn-success w-full">Register</button></li>
+            </ul>
+        </div>
+        <section class="text-center py-16">
+        <h2 class="text-4xl font-bold">Freshness <span class="text-green-600">You Can</span> <span class="text-green-600">Count On</span>, Prices You’ll Love!</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we've got you covered every day!</p>
+        <div class="flex justify-center mt-6">
+            <img src="assets/hero-vegetables.png" alt="Fresh Vegetables">
+        </div>
+    </section>
+    </header>
+    <main>
+        <!-- Service section start from here -->
+        <section class="container mx-auto py-12">
+        <h3 class="text-2xl font-bold  mb-6">Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="card bg-white p-4 shadow-md">
+                <img src="assets/service.png" alt="Product">
+                <h4 class="text-lg font-bold mt-2">Bananas</h4>
+                <p class="text-gray-600">$1.20 / kg</p>
+            </div>
+            <div class="card bg-white p-4 shadow-md">
+                <img src="assets/delivery.png" alt="Product">
+                <h4 class="text-lg font-bold mt-2">Bananas</h4>
+                <p class="text-gray-600">$1.20 / kg</p>
+            </div>
+            <div class="card bg-white p-4 shadow-md">
+                <img src="assets/healthy.png" alt="Product">
+                <h4 class="text-lg font-bold mt-2">Bananas</h4>
+                <p class="text-gray-600">$1.20 / kg</p>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Popular Products section -->
+       <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold text-green-700 mb-4">Popular Products</h2>
+        <div class="grid md:grid-cols-1 md: lg:grid-cols-4 gap-4">
+            <!-- Discount Card -->
+            <div class="bg-gradient-to-br from-green-400 to-green-600 text-white p-6 rounded-lg flex flex-col justify-between shadow-lg">
+                <h3 class="text-2xl font-bold">30% off</h3>
+                <p class="text-sm">Discover a world of treats, toys, and essentials handpicked for you</p>
+                <button class="btn btn-white mt-4">Buy Now</button>
+                <img src="https://via.placeholder.com/100" alt="Offer" class="mt-4 w-32 mx-auto">
+            </div>
+            
+            <!-- Product Cards -->
+            <div class="grid grid-cols-3 gap-4 col-span-3">
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Onion">
+                    <p class="text-sm font-bold">Onion 1 KG</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Tomato">
+                    <p class="text-sm font-bold">Tomato 500 g</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Potato">
+                    <p class="text-sm font-bold">Potato 1 KG</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Onion">
+                    <p class="text-sm font-bold">Onion 1 KG</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Tomato">
+                    <p class="text-sm font-bold">Tomato 500 g</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Potato">
+                    <p class="text-sm font-bold">Potato 1 KG</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Onion">
+                    <p class="text-sm font-bold">Onion 1 KG</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Tomato">
+                    <p class="text-sm font-bold">Tomato 500 g</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+                
+                <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+                    <img src="https://via.placeholder.com/50" alt="Potato">
+                    <p class="text-sm font-bold">Potato 1 KG</p>
+                    <p class="text-sm text-gray-500">$39.99</p>
+                    <div class="rating rating-sm mt-2">
+                        ⭐ 4.5
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <section>
+         <h2 class="text-lg font-bold text-green-700">Arrival & Offers</h2>
+    <div class="grid grid-cols-2 gap-4 mt-4">
+        <!-- Daawat Offer Card -->
+        <div class="bg-green-900 text-white p-6 rounded-lg flex items-center space-x-4">
+            <img src="https://via.placeholder.com/100" alt="Daawat Biryani Rice" class="w-24 h-36">
+            <div>
+                <h3 class="text-lg font-semibold">Daawat <span class="block text-sm">The Finest</span></h3>
+                <span class="badge badge-success p-2 mt-2">Cook Exotic Dishes</span>
+                <p class="mt-2 text-lg">UP TO <span class="font-bold">20% OFF</span></p>
+            </div>
+        </div>
+        <!-- India Gate Offer Card -->
+        <div class="bg-blue-900 text-white p-6 rounded-lg flex items-center space-x-4">
+            <img src="https://via.placeholder.com/100" alt="India Gate Rice" class="w-24 h-36">
+            <div>
+                <h3 class="text-lg font-semibold">India Gate <span class="block text-sm">World’s No.1 Rice</span></h3>
+                <p class="mt-2 text-lg">UP TO <span class="font-bold">40% OFF</span></p>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+
+<div class="container mx-auto py-8">
+  <h2 class="text-3xl font-semibold text-center mb-6">Today's Deals</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <!-- Deal 1 -->
+    <div class="card w-full bg-base-100 shadow-lg">
+      <figure><img src="https://via.placeholder.com/200" alt="Deal Item 1" class="rounded-lg" /></figure>
+      <div class="card-body text-center">
+        <h3 class="card-title text-xl font-semibold">Fresh Apples</h3>
+        <p class="text-gray-600">Buy 1 Get 1 Free</p>
+        <div class="card-actions justify-center mt-4">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deal 2 -->
+    <div class="card w-full bg-base-100 shadow-lg">
+      <figure><img src="https://via.placeholder.com/200" alt="Deal Item 2" class="rounded-lg" /></figure>
+      <div class="card-body text-center">
+        <h3 class="card-title text-xl font-semibold">Organic Bananas</h3>
+        <p class="text-gray-600">20% Off</p>
+        <div class="card-actions justify-center mt-4">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deal 3 -->
+    <div class="card w-full bg-base-100 shadow-lg">
+      <figure><img src="https://via.placeholder.com/200" alt="Deal Item 3" class="rounded-lg" /></figure>
+      <div class="card-body text-center">
+        <h3 class="card-title text-xl font-semibold">Whole Grain Bread</h3>
+        <p class="text-gray-600">Buy 2 for $5</p>
+        <div class="card-actions justify-center mt-4">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deal 4 -->
+    <div class="card w-full bg-base-100 shadow-lg">
+      <figure><img src="https://via.placeholder.com/200" alt="Deal Item 4" class="rounded-lg" /></figure>
+      <div class="card-body text-center">
+        <h3 class="card-title text-xl font-semibold">Eggs (12 Pack)</h3>
+        <p class="text-gray-600">$1.99 - Limited Time</p>
+        <div class="card-actions justify-center mt-4">
+          <button class="btn btn-primary">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    </main>
+     <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto mt-10 flex items-center space-x-6">
+        <img src="https://via.placeholder.com/150" alt="Grocery Basket" class="w-32 h-32">
+        <div>
+            <h2 class="text-xl font-bold text-gray-800">Get Grocery News!</h2>
+            <p class="text-gray-600">Exclusive training tips, tricks, product deals and more.</p>
+            <div class="mt-4 flex space-x-2">
+                <input type="email" placeholder="Enter email..." class="input input-bordered w-full ">
+                <button class="btn btn-success">Subscribe</button>
+            </div>
+        </div>
+    </div
+    <footer class="mt-10 p-6 bg-green-900 text-white">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div>
+                <h3 class="font-bold">nature's platter</h3>
+                <p class="text-sm">Discover a world of treats, toys, and essentials handpicked for your furry friends.</p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#" class="hover:underline">Product</a></li>
+                    <li><a href="#" class="hover:underline">Services</a></li>
+                    <li><a href="#" class="hover:underline">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="font-bold">Follow Us</p>
+                <div class="flex space-x-2 mt-2">
+                    <a href="#" class="text-xl">🌍</a>
+                    <a href="#" class="text-xl">📷</a>
+                    <a href="#" class="text-xl">🔗</a>
+                    <a href="#" class="text-xl">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
