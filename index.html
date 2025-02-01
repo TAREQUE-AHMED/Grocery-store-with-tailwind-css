@@ -7,7 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
     <style>
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @keyframes typewriter {
   0% {
@@ -28,16 +30,16 @@
   0%, 20% {
     content: "Web Developer";
   }
-  21%, 40% {
+  20.1%, 40% {
     content: "Problem Solver";
   }
-  41%, 60% {
+  40.1%, 60% {
     content: "Web Designer";
   }
-  61%, 80% {
+  60.1%, 80% {
     content: "Photographer";
   }
-  81%, 100% {
+  80.1%, 100% {
     content: "Gamer";
   }
 }
@@ -48,7 +50,28 @@
     width: 0;
     overflow: hidden;
     white-space: nowrap;
-    animation: typewriter 20s steps(20) 1s forwards, words 20s infinite;
+    animation: typewriter 5s steps(20) forwards, words 20s steps(20) forwards;
+  }
+
+  /* Add delayed animations for each phrase */
+  .phrase-1 {
+    animation: typewriter 5s steps(20) forwards, words 5s steps(20) forwards;
+  }
+
+  .phrase-2 {
+    animation: typewriter 5s steps(20) 5s forwards, words 5s steps(20) 5s forwards;
+  }
+
+  .phrase-3 {
+    animation: typewriter 5s steps(20) 10s forwards, words 5s steps(20) 10s forwards;
+  }
+
+  .phrase-4 {
+    animation: typewriter 5s steps(20) 15s forwards, words 5s steps(20) 15s forwards;
+  }
+
+  .phrase-5 {
+    animation: typewriter 5s steps(20) 20s forwards, words 5s steps(20) 20s forwards;
   }
 
   .animate-cursor {
@@ -61,9 +84,6 @@
     animation: cursor-blink 0.8s infinite;
   }
 }
-
-
-
     </style>
     
 </head>
@@ -109,11 +129,11 @@
             </ul>
         </div>
         <section class="text-center py-16">
-        <h2 class="text-4xl font-bold">Freshness <span class="text-green-600">You Can</span> <span class="text-green-600">Count On</span>, Prices You’ll Love!</h2>
+        <h2 class="text-4xl font-bold">Freshness <span class="text-green-600">You Can <br></span> <span class="text-green-600">Count On</span>, Prices You’ll Love!</h2>
         <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we've got you covered every day!</p>
        <div class="text-4xl font-semibold min-w-[280px]">
   <span class="relative inline-block">
-   <h1>I am a <span class="text-orange-500 animate-typewriter">Web Developer</span></h1>
+   <span class="text-orange-500 animate-typewriter">Web Developer</span>
     <span class="absolute top-0 right-[-8px] border-l-2 border-orange-500 animate-cursor"></span>
   </span>
 </div>
@@ -139,7 +159,7 @@
                      </div>
              <h3 class="text-lg font-bold mt-4">24/7 Services</h3>
         <p class="text-gray-600 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+             These services are crucial for industries where accessibility and immediate support are essential.
         </p>
           </div>
 
@@ -152,7 +172,7 @@
                      </div>
              <h3 class="text-lg font-bold mt-4">Fast Delivery</h3>
         <p class="text-gray-600 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+           Fast delivery is all about getting the product or service to the customer as quickly as possible.
         </p>
           </div>
           <!-- card-3 -->
@@ -165,7 +185,7 @@
                      </div>
              <h3 class="text-lg font-bold mt-4">Health Products</h3>
         <p class="text-gray-600 text-sm mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+            These products can range from nutritional supplements, fitness equipment, personal care items, to items designed to address specific medical needs.
         </p>
           </div>
         </div>
@@ -196,12 +216,72 @@
                   <div>
                     <img src="assets/onion.png" alt="Onion" class="pt-8">
                 </div>
-               <div>
+               <div class="mt-8">
                 <div class="rating rating-sm mt-2">
                     ⭐ 4.5
                 </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
+                 <p class="text-2xl text-black font-bold">Onion 1 KG</p>
                 <p class="text-sm text-gray-500">$39.99</p>
+                
+               </div>
+              </div>
+            </div>
+            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+              <div class="flex flex-col-2 gap-4">
+                  <div>
+                    <img src="assets/tomato.png" alt="tomato" class="pt-8">
+                </div>
+               <div class="mt-8">
+                <div class="rating rating-sm mt-2">
+                    ⭐ 4.5
+                </div>
+                 <p class="text-2xl text-black font-bold">Tomato 2 KG</p>
+                <p class="text-sm text-gray-500">$29.00</p>
+                
+               </div>
+              </div>
+            </div>
+            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+              <div class="flex flex-col-2 gap-4">
+                  <div>
+                    <img src="assets/potato.png" alt="potato" class="pt-8">
+                </div>
+               <div class="mt-8">
+                <div class="rating rating-sm mt-2">
+                    ⭐ 5.00
+                </div>
+                 <p class="text-2xl text-black font-bold">Potato 1 KG</p>
+                <p class="text-sm font-bold text-black">$40.00</p>
+                
+               </div>
+              </div>
+            </div>
+            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+              <div class="flex flex-col-2 gap-4">
+                  <div>
+                    <img src="assets/tomato.png" alt="tomato" class="pt-8">
+                </div>
+               <div class="mt-8">
+                <div class="rating rating-sm mt-2">
+                    ⭐ 3.5
+                </div>
+                 <p class="text-2xl text-black font-bold">Tomato 2 KG</p>
+                <p class="text-sm text-gray-500">$50.00</p>
+                
+               </div>
+              </div>
+            </div>
+            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+              <div class="flex flex-col-2 gap-4">
+                  <div>
+                    <img src="assets/potato.png" alt="potato" class="pt-8">
+                </div>
+               <div class="mt-8">
+                <div class="rating rating-sm mt-2 text-bold text-black">
+                    ⭐ 4.5
+                </div>
+                 <p class="text-2xl text-black font-bold">potato 1 KG</p>
+                <p class="text-sm text-black-500">$39.99</p>
                 
                </div>
               </div>
@@ -211,12 +291,27 @@
                   <div>
                     <img src="assets/onion.png" alt="Onion" class="pt-8">
                 </div>
-               <div>
+               <div class="mt-8">
                 <div class="rating rating-sm mt-2">
                     ⭐ 4.5
                 </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
-                <p class="text-sm text-gray-500">$39.99</p>
+                 <p class="text-2xl text-black font-bold">Onion 1.5 KG</p>
+                <p class="text-sm text-gray-500">$29.99</p>
+                
+               </div>
+              </div>
+            </div>
+            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
+              <div class="flex flex-col-2 gap-4">
+                  <div>
+                    <img src="assets/potato.png" alt="potato" class="pt-8">
+                </div>
+               <div class="mt-8">
+                <div class="rating rating-sm mt-2">
+                    ⭐ 4.5
+                </div>
+                 <p class="text-2xl text-black font-bold">Potato 3 KG</p>
+                <p class="text-sm text-gray-500">$59.99</p>
                 
                </div>
               </div>
@@ -226,86 +321,11 @@
                   <div>
                     <img src="assets/onion.png" alt="Onion" class="pt-8">
                 </div>
-               <div>
+               <div class="mt-8">
                 <div class="rating rating-sm mt-2">
                     ⭐ 4.5
                 </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
-                <p class="text-sm text-gray-500">$39.99</p>
-                
-               </div>
-              </div>
-            </div>
-            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
-              <div class="flex flex-col-2 gap-4">
-                  <div>
-                    <img src="assets/onion.png" alt="Onion" class="pt-8">
-                </div>
-               <div>
-                <div class="rating rating-sm mt-2">
-                    ⭐ 4.5
-                </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
-                <p class="text-sm text-gray-500">$39.99</p>
-                
-               </div>
-              </div>
-            </div>
-            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
-              <div class="flex flex-col-2 gap-4">
-                  <div>
-                    <img src="assets/onion.png" alt="Onion" class="pt-8">
-                </div>
-               <div>
-                <div class="rating rating-sm mt-2">
-                    ⭐ 4.5
-                </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
-                <p class="text-sm text-gray-500">$39.99</p>
-                
-               </div>
-              </div>
-            </div>
-            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
-              <div class="flex flex-col-2 gap-4">
-                  <div>
-                    <img src="assets/onion.png" alt="Onion" class="pt-8">
-                </div>
-               <div>
-                <div class="rating rating-sm mt-2">
-                    ⭐ 4.5
-                </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
-                <p class="text-sm text-gray-500">$39.99</p>
-                
-               </div>
-              </div>
-            </div>
-            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
-              <div class="flex flex-col-2 gap-4">
-                  <div>
-                    <img src="assets/onion.png" alt="Onion" class="pt-8">
-                </div>
-               <div>
-                <div class="rating rating-sm mt-2">
-                    ⭐ 4.5
-                </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
-                <p class="text-sm text-gray-500">$39.99</p>
-                
-               </div>
-              </div>
-            </div>
-            <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg">
-              <div class="flex flex-col-2 gap-4">
-                  <div>
-                    <img src="assets/onion.png" alt="Onion" class="pt-8">
-                </div>
-               <div>
-                <div class="rating rating-sm mt-2">
-                    ⭐ 4.5
-                </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
+                 <p class="text-2xl text-black font-bold">Onion 1 KG</p>
                 <p class="text-sm text-gray-500">$39.99</p>
                 
                </div>
@@ -314,14 +334,14 @@
             <div class="card bg-white shadow-md p-4 flex flex-col items-center rounded-lg hidden md:block">
               <div class="flex flex-col-2 gap-4">
                   <div>
-                    <img src="assets/onion.png" alt="Onion" class="pt-8">
+                    <img src="assets/tomato.png" alt="tomato" class="pt-8">
                 </div>
-               <div>
+               <div class="mt-8">
                 <div class="rating rating-sm mt-2">
                     ⭐ 4.5
                 </div>
-                 <p class="text-sm font-bold">Onion 1 KG</p>
-                <p class="text-sm text-gray-500">$39.99</p>
+                 <p class="text-2xl text-black font-bold">Tomato 0.5 KG</p>
+                <p class="text-sm text-gray-500">$19.99</p>
                 
                </div>
               </div>
@@ -335,7 +355,7 @@
 
 
     <section>
-         <h2 class="text-lg font-bold text-green-700 p-12">Arrival & Offers</h2>
+         <h2 class="font-bold text-green-700 p-12 text-4xl">Arrival & Offers</h2>
    <div class="flex flex-col lg:flex-row gap-4 mt-4 px-12 lg:px-8">
     <!-- Dawat Offer Card-->
     <div class="bg-green-900 text-white p-12 rounded-lg flex items-center space-x-4 lg:w-[60%]">
