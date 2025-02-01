@@ -6,6 +6,65 @@
     <title>Grocery Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+    <style>
+
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes words {
+  0%, 20% {
+    content: "Web Developer";
+  }
+  21%, 40% {
+    content: "Problem Solver";
+  }
+  41%, 60% {
+    content: "Web Designer";
+  }
+  61%, 80% {
+    content: "Photographer";
+  }
+  81%, 100% {
+    content: "Gamer";
+  }
+}
+
+@layer utilities {
+  .animate-typewriter {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 20s steps(20) 1s forwards, words 20s infinite;
+  }
+
+  .animate-cursor {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    width: 2px;
+    height: 100%;
+    border-left: 2px solid #ff7f50;
+    animation: cursor-blink 0.8s infinite;
+  }
+}
+
+
+
+    </style>
     
 </head>
 <body class="bg-gray-100">
@@ -52,10 +111,13 @@
         <section class="text-center py-16">
         <h2 class="text-4xl font-bold">Freshness <span class="text-green-600">You Can</span> <span class="text-green-600">Count On</span>, Prices You’ll Love!</h2>
         <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we've got you covered every day!</p>
-       <br>
-        <div>
-        <h1 class="animated">Welcome to my Website</h1>
-       </div>
+       <div class="text-4xl font-semibold min-w-[280px]">
+  <span class="relative inline-block">
+   <h1>I am a <span class="text-orange-500 animate-typewriter">Web Developer</span></h1>
+    <span class="absolute top-0 right-[-8px] border-l-2 border-orange-500 animate-cursor"></span>
+  </span>
+</div>
+
         <div class="flex justify-center mt-6">
             <img src="assets/hero-vegetables.png" alt="Fresh Vegetables">
         </div>
@@ -364,7 +426,7 @@
 </div>
 
     </main>
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto mt-10 flex items-center space-x-6 relative -mb-24 md:-mb-18">
+    <div class="bg-stone-400 p-8 rounded-lg shadow-lg max-w-4xl mx-auto mt-10 flex items-center space-x-6 relative -mb-24 md:-mb-18 p-12 md:p-12">
     <img src="assets/vegetable-busket.png" alt="Grocery Basket" class="w-32 h-32">
     <div>
         <h2 class="text-xl font-bold text-gray-800">Get Grocery News!</h2>
@@ -377,14 +439,14 @@
 </div>
 
 <footer class="mt-10 p-6 bg-green-900 text-white">
-    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center mt-8 md:pt-8">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center mt-8 pt-8 md:pt-8">
         <div class="text-center sm:text-left">
             <img src="assets/logo-footer.png" alt="Logo" class="mx-auto md:mt-8">
             <p class="text-sm md:mt-6 lg:mt-4">Discover a world of treats, toys, and essentials handpicked for your furry friends.</p>
         </div>
 
-        <div class="mt-4 sm:mt-0">
-            <ul class="flex flex-col sm:flex-row sm:space-x-4 text-center sm:text-left">
+        <div class="mt-4">
+            <ul class="text-center">
                 <li><a href="#" class="hover:underline">Product</a></li>
                 <li><a href="#" class="hover:underline">Services</a></li>
                 <li><a href="#" class="hover:underline">Contact us</a></li>
